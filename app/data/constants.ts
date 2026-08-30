@@ -26,3 +26,27 @@ export const LINK_SOCIAL_MEDIA = [
     icon: RiInstagramFill,
   },
 ];
+
+export const EDUCATION_DATA = [
+  {
+    period: "2020 - 2026",
+    title: "Communications Engineering Degree",
+    subtitle: "Homs University",
+    description:
+      "Built a solid foundation in signal processing, systems engineering, and analytical problem-solving, providing a seamless transition into software and web architecture.",
+  },
+  {
+    period: "2022 - 2025",
+    title: "Full-Stack Web Development",
+    subtitle: "Self-Directed & Practical Projects",
+    description:
+      "Mastered core web fundamentals (HTML, CSS, JavaScript, TypeScript) and scaled up to modern frontend and backend frameworks through hands-on project implementations.",
+  },
+  {
+    period: "2025 - Present",
+    title: "Advanced Architecture & Engineering",
+    subtitle: "Continuous Professional Growth",
+    description:
+      "Expanding expertise in building scalable full-stack applications, database modeling (Relational & NoSQL), cloud integrations, and robust application security.",
+  },
+];

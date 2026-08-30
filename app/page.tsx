@@ -1,12 +1,13 @@
 import React from "react";
-import Home from "./components/sections/home/home";
 import About from "./components/sections/about";
+import { Sections } from "./components/sections";
 
 function HomeContainer() {
   return (
     <>
-      <Home />
-      <About />;
+      <Sections.Home />
+      <Sections.About />
+      <Sections.Education />
     </>
   );
 }
