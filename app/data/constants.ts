@@ -7,7 +7,7 @@ import {
 
 export const LINK_NAV_SECTION = [
   { name: "Home", label: "home" },
-  { name: "About", label: "aobut" },
+  { name: "About", label: "about" },
   { name: "Education", label: "education" },
   { name: "Skills", label: "skills" },
   { name: "Contact", label: "contact" },
