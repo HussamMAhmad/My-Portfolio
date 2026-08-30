@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/components/ui/magicImage/magicImage.css"],"sourcesContent":[".image {\r\n  position: absolute;\r\n  top: 0;\r\n  right: 0;\r\n  width: 45%;\r\n  height: 100%;\r\n}\r\n.wizard {\r\n  width: 100%;\r\n  height: 100%;\r\n}\r\n.image::before {\r\n  content: \"\";\r\n  position: absolute;\r\n  width: 100%;\r\n  height: 100%;\r\n  transition: 3s;\r\n}\r\n.image:hover::before {\r\n  background-color: var(--primary-bg);\r\n  opacity: 0.8;\r\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAOA;;;;;AAIA;;;;;;;;AAOA"}}]
-}
