@@ -4,9 +4,8 @@ import Image from "next/image";
 import images from "@/app/public/images";
 import { useState } from "react";
 import Navbar from "./navbar";
-import { Menu } from "lucide-react";
+import { Menu , X} from "lucide-react";
 import NavbarMobile from "./navbar_mobile/navbar-mobile";
-import { X } from "lucide-react";
 
 function Header() {
   const [toggle, setToggle] = useState(false);
@@ -30,9 +29,9 @@ function Header() {
       <Navbar />
       <div className="lg:hidden">
         {toggle ? (
-          <X className="" onClick={() => setToggle(false)} />
+          <X className="text-text" onClick={() => setToggle(false)} />
         ) : (
-          <Menu className="" onClick={() => setToggle(true)} />
+          <Menu className="text-text" onClick={() => setToggle(true)} />
         )}
       </div>
       {toggle && <NavbarMobile putClass={toggle} />}
