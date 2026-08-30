@@ -1,5 +1,5 @@
 import React from "react";
-import EduCard from "../ui/education-card/card";
+import EduCard from "../ui/eduCard";
 import TitleSec from "../ui/title-sec";
 import { EDUCATION_DATA } from "@/app/data/constants";
 
@@ -7,7 +7,7 @@ function Education() {
   return (
     <section
       id="education"
-      className="section min-h-screen flex justify-evenly items-center flex-col"
+      className="section gap-8 flex justify-evenly items-center flex-col"
     >
       <TitleSec partOne="My" partTwo="Journey" />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

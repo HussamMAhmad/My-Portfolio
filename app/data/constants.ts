@@ -50,3 +50,53 @@ export const EDUCATION_DATA = [
       "Expanding expertise in building scalable full-stack applications, database modeling (Relational & NoSQL), cloud integrations, and robust application security.",
   },
 ];
+
+export const TECHNICAL_ECOSYSTEM_MAIN = [
+  {
+    id: "frontend",
+    subtitle: "Primary Expertise",
+    title: "Frontend & Full-Stack Core",
+    description:
+      "Building reactive, performant, and type-safe user interfaces with modern web standards.",
+    skills: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "JavaScript (ES6+)",
+    ],
+  },
+  {
+    id: "backend",
+    subtitle: "Server & Architecture",
+    title: "Backend & Databases",
+    description:
+      "Designing RESTful APIs, relational data models, and scalable server structures.",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Prisma ORM",
+      "MongoDB",
+      "JWT Auth",
+    ],
+  },
+];
+
+export const TECHNICAL_ECOSYSTEM_SUB = [
+  {
+    id: "security",
+    skills: [
+      "Upstash Workflow",
+      "Arcjet Protection",
+      "Nodemailer",
+      "RESTful Architecture",
+    ],
+    title: "Workflows & Security",
+  },
+  {
+    id: "tools",
+    skills: ["Git & GitHub", "Vite", "Photoshop (UI Assets)", "Material UI"],
+    title: "Tools & Graphics",
+  },
+];

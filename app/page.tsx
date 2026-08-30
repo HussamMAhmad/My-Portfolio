@@ -8,6 +8,7 @@ function HomeContainer() {
       <Sections.Home />
       <Sections.About />
       <Sections.Education />
+      <Sections.Skills />
     </>
   );
 }
