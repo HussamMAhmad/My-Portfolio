@@ -8,7 +8,7 @@
     --padding-x: 20px;
     --padding-y: 90px;
     --padding-main: var(--padding-x) var(--padding-y);
-    --padding-mobile: 10px 40px;
+    --padding-mobile: 20px 10px;
     --main-transition: 0.5s;
     --shadow-navbar: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -16,7 +16,7 @@
 @theme {
     --color-main: var(--main-color);
     --color-primary-bg: var(--primary-bg);
-    --color-secondary-bg: var(--secondry-bg);
+    --color-secondary-bg: var(--secondary-bg);
     --color-text: var(--text-color);
     --font-poppins: var(--font-poppins), sans-serif;
     --spacing-sections: var(--padding-main);
@@ -34,13 +34,14 @@
     }
 
     body {
-        @apply bg-primary-bg;
+        @apply bg-primary-bg
     }
+
 }
 
 @layer component {
     .header {
-        @apply p-mobile fixed duration-(--main-transition) lg:p-sections flex justify-between items-center bg-transparent w-full z-100;
+        @apply p-mobile fixed duration-(--main-transition) md:p-sections flex justify-between items-center bg-transparent w-full z-100;
     }
 
     .section {
@@ -65,4 +66,20 @@
 
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out forwards;
 }
