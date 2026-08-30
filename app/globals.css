@@ -30,17 +30,21 @@
     }
 
     html {
-        @apply overflow-x-hidden max-sm:text-[50%];
+        @apply overflow-x-hidden max-lg:text-[50%];
     }
 
     body {
-        @apply bg-primary-bg text-text;
+        @apply bg-primary-bg;
     }
 }
 
 @layer component {
     .header {
-        @apply max-lg:p-mobile relative duration-(--main-transition) p-sections flex justify-between items-center bg-transparent w-full z-100;
+        @apply p-mobile fixed duration-(--main-transition) lg:p-sections flex justify-between items-center bg-transparent w-full z-100;
+    }
+
+    .section {
+        @apply p-sections max-lg:p-mobile
     }
 
     .logo {
