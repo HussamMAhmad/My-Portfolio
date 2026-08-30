@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import ButtonIn from "../ui/buttonIn/buttonIn";
 import images from "@/app/public/images";
+import TitleSec from "../ui/title-sec";
 
 export default function About() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -28,9 +29,7 @@ export default function About() {
         </div>
 
         <div className="flex-1 max-w-[650px] flex flex-col items-start">
-          <h2 className="text-[32px] sm:text-[45px] font-bold text-text mb-2">
-            About <span className="text-main">Me</span>
-          </h2>
+          <TitleSec partOne="About" partTwo="me" />
 
           <h3 className="text-[18px] sm:text-[22px] font-semibold text-text mb-4">
             Full-Stack Developer
@@ -56,16 +55,28 @@ export default function About() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full my-6">
             <div className="p-4 border border-main/30 rounded-lg text-center bg-primary-bg">
-              <span className="block lg:text-2xl text-[20px] font-bold text-main">3+</span>
-              <span className="lg:text-xs text-[10px] text-text">Years Experience</span>
+              <span className="block lg:text-2xl text-[20px] font-bold text-main">
+                3+
+              </span>
+              <span className="lg:text-xs text-[10px] text-text">
+                Years Experience
+              </span>
             </div>
             <div className="p-4 border border-main/30 rounded-lg text-center bg-primary-bg">
-              <span className="block lg:text-2xl text-[20px] font-bold text-main">30+</span>
-              <span className="lg:text-xs text-[10px] text-text">Projects Built</span>
+              <span className="block lg:text-2xl text-[20px] font-bold text-main">
+                30+
+              </span>
+              <span className="lg:text-xs text-[10px] text-text">
+                Projects Built
+              </span>
             </div>
             <div className="p-4 border border-main/30 rounded-lg text-center bg-primary-bg">
-              <span className="block lg:text-2xl text-[20px] font-bold text-main">100%</span>
-              <span className="lg:text-xs text-[10px] text-text">Responsive Code</span>
+              <span className="block lg:text-2xl text-[20px] font-bold text-main">
+                100%
+              </span>
+              <span className="lg:text-xs text-[10px] text-text">
+                Responsive Code
+              </span>
             </div>
           </div>
 

@@ -5,9 +5,7 @@
     --secondary-bg: #112e42;
     --text-color: #ededed;
     --main-color: #00abf0;
-    --padding-x: 20px;
-    --padding-y: 90px;
-    --padding-main: var(--padding-x) var(--padding-y);
+    --padding-main: 90px 90px;
     --padding-mobile: 20px 10px;
     --main-transition: 0.5s;
     --shadow-navbar: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -30,7 +28,7 @@
     }
 
     html {
-        @apply overflow-x-hidden max-lg:text-[50%];
+        @apply overflow-x-hidden max-md:text-[50%];
     }
 
     body {
@@ -41,11 +39,11 @@
 
 @layer component {
     .header {
-        @apply p-mobile fixed duration-(--main-transition) md:p-sections flex justify-between items-center bg-transparent w-full z-100;
+        @apply p-mobile fixed duration-(--main-transition) md:px-[90px] flex justify-between items-center bg-transparent w-full z-100;
     }
 
     .section {
-        @apply p-sections max-lg:p-mobile
+        @apply md:p-sections p-mobile
     }
 
     .logo {
@@ -54,6 +52,10 @@
 
     .links {
         @apply gap-10 relative items-center font-medium text-[16px]
+    }
+
+    .title-section {
+        @apply text-[32px] sm:text-[45px] font-bold text-text mb-2
     }
 }
 
