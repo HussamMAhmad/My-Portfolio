@@ -100,3 +100,16 @@ export const TECHNICAL_ECOSYSTEM_SUB = [
     title: "Tools & Graphics",
   },
 ];
+
+const PROJECTS_WITH_DATA = [
+  {
+    id: "1",
+    title: "Advanced Subscription Manager",
+    description:
+      "A relational subscription management architecture with automated alerts, secure authentication, and rate limiting.",
+    tools: ["TypeScript", "PostgreSql", "Prisma", "Node.js", "JWT", "Arcjet"],
+    urlSource: "",
+    urlDemo: "",
+    image: "",
+  },
+];

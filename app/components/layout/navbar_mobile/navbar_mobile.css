@@ -1,7 +1,7 @@
 .links-mobile {
     display: block;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 40px);
     left: 0;
     padding: 0.7rem 4%;
     background-color: var(--main-color);
@@ -30,13 +30,13 @@
     animation-delay: 0.25s;
 }
 
-/* .links-mobile.slide-out {
+.links-mobile.slide-out {
     animation: slideOut 0.25s forwards ease-in-out;
-} */
-/* 
+}
+
 .links-mobile.slide-out .active-nav {
 animation: slideOut 0.25s forwards ease-in-out;
-} */
+}
 
 .links-mobile li {
     display: block;

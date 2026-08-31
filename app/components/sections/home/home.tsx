@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="px-4 sm:px-12 lg:px-20 pt-28 lg:pt-36 pb-12 h-screen w-full relative"
+      className="px-[16px] sm:px-[24px] pt-40 sm:pt-28 lg:pt-36 pb-12 h-screen w-full relative"
     >
       <div className="lg:max-w-[55%] max-lg:w-full flex flex-col justify-between items-start h-full">
         <div>

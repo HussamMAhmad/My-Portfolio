@@ -4,7 +4,7 @@ import Image from "next/image";
 import images from "@/app/public/images";
 import { useState } from "react";
 import Navbar from "./navbar";
-import { Menu , X} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import NavbarMobile from "./navbar_mobile/navbar-mobile";
 
 function Header() {
@@ -34,7 +34,13 @@ function Header() {
           <Menu className="text-text" onClick={() => setToggle(true)} />
         )}
       </div>
-      {toggle && <NavbarMobile putClass={toggle} />}
+      <div
+        className={`fixed inset-x-0 transition-all lg:hidden
+      ${toggle ? " pointer-events-auto" : "  pointer-events-none"}
+        `}
+      >
+        <NavbarMobile putClass={toggle} />
+      </div>
     </header>
   );
 }

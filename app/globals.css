@@ -5,8 +5,9 @@
     --secondary-bg: #112e42;
     --text-color: #ededed;
     --main-color: #00abf0;
-    --padding-main: 90px 90px;
-    --padding-mobile: 20px 10px;
+    --padding-main: 80px 24px;
+    --padding-tablet: 60px 24px;
+    --padding-mobile: 40px 16px;
     --main-transition: 0.5s;
     --shadow-navbar: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -17,7 +18,8 @@
     --color-secondary-bg: var(--secondary-bg);
     --color-text: var(--text-color);
     --font-poppins: var(--font-poppins), sans-serif;
-    --spacing-sections: var(--padding-main);
+    --spacing-main: var(--padding-main);
+    --spacing-tablet: var(--padding-tablet);
     --spacing-mobile: var(--padding-mobile);
     --shadow-nav: var(--shadow-navbar);
 }
@@ -38,12 +40,12 @@
 }
 
 @layer component {
-    .header {
-        @apply p-mobile fixed duration-(--main-transition) md:px-[90px] flex justify-between items-center bg-transparent w-full z-100;
+    .section {
+        @apply p-mobile sm:p-tablet lg:p-main
     }
 
-    .section {
-        @apply md:p-sections p-mobile
+    .header {
+        @apply py-[20px] px-[16px] sm:px-[24px] fixed duration-(--main-transition) flex justify-between items-center bg-transparent w-full z-100;
     }
 
     .logo {

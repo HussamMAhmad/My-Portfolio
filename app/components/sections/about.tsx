@@ -28,7 +28,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex-1 max-w-[650px] flex flex-col items-start">
+        <div className="flex-1 lg:max-w-[650px] flex flex-col items-start">
           <TitleSec partOne="About" partTwo="me" />
 
           <h3 className="text-[18px] sm:text-[22px] font-semibold text-text mb-4">
