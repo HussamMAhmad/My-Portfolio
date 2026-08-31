@@ -10,7 +10,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="w-full section mx-auto justify-center flex items-center flex-col gap-8 bg-secondary-bg"
+      className="w-full section mx-auto justify-center flex items-center flex-col gap-8 bg-primary-bg"
     >
       <TitleSec partOne="Technical" partTwo="Ecosystem" />
 

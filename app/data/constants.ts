@@ -8,10 +8,10 @@ import {
 export const LINK_NAV_SECTION = [
   { name: "Home", label: "home" },
   { name: "About", label: "about" },
-  { name: "Education", label: "education" },
   { name: "Skills", label: "skills" },
-  { name: "Contact", label: "contact" },
   { name: "Porjects", label: "projects" },
+  { name: "Education", label: "education" },
+  { name: "Contact", label: "contact" },
 ];
 
 export const LINK_SOCIAL_MEDIA = [

@@ -15,7 +15,7 @@ interface CardProp {
 
 export function MainCard({ data }: CardProp) {
   return (
-    <div className="md:col-span-2 p-6 rounded-3xl bg-primary-bg/50 border-solid border border-main/20 flex flex-col justify-between hover:border-main/50 duration-300 transition-all">
+    <div className="md:col-span-2 p-6 rounded-3xl bg-secondary-bg/50 border-solid border border-main/20 flex flex-col justify-between hover:border-main/50 duration-300 transition-all">
       <div>
         <div className="text-main text-[12px] font-mono uppercase tracking-widest mb-2">
           {data.subtitle}
@@ -39,7 +39,7 @@ export function MainCard({ data }: CardProp) {
 
 export function SubCard({ data }: CardProp) {
   return (
-    <div className="md:col-span-2 p-6 rounded-3xl bg-primary-bg/50 border border-solid border-main/20 hover:border-main/50 duration-300 transition-all">
+    <div className="md:col-span-2 p-6 rounded-3xl bg-secondary-bg/50 border border-solid border-main/20 hover:border-main/50 duration-300 transition-all">
       <h4 className="text-[20px] font-bold text-text mb-3">{data.title}</h4>
       <div className="flex flex-wrap gap-2">
         {data.skills.map((s, i) => (

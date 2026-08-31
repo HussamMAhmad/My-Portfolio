@@ -1,14 +1,17 @@
 import React from "react";
-import About from "./components/sections/about";
 import { Sections } from "./components/sections";
+import Footer from "./components/layout/footer";
 
 function HomeContainer() {
   return (
     <>
       <Sections.Home />
       <Sections.About />
-      <Sections.Education />
       <Sections.Skills />
+      <Sections.Projects />
+      <Sections.Education />
+      <Sections.Contact />
+      <Footer/>
     </>
   );
 }
