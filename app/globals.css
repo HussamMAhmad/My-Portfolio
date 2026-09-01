@@ -22,6 +22,45 @@
     --spacing-tablet: var(--padding-tablet);
     --spacing-mobile: var(--padding-mobile);
     --shadow-nav: var(--shadow-navbar);
+
+    --animate-spin-slow : spin-slow 8s infinite linear;
+    --animate-fadeIn : fadeIn  0.3s ease-in-out forwards;
+    --animate-fadeout : fadeout  0.3s ease-in-out forwards;
+
+
+    @keyframes fadeIn {
+  from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+     to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+    @keyframes fadeout {
+    from {
+          opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+         opacity: 0;
+        transform: translateY(-5px);
+    }
+}
+    @keyframes spin-slow {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 }
 
 @layer base {
@@ -45,7 +84,7 @@
     }
 
     .header {
-        @apply py-[20px] px-[16px] sm:px-[24px] fixed duration-(--main-transition) flex justify-between items-center bg-transparent w-full z-100;
+        @apply py-[20px] px-[16px] sm:px-[24px] fixed duration-(--main-transition) flex justify-between items-center w-full z-100;
     }
 
     .logo {
@@ -70,20 +109,4 @@
 
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-in {
-    animation: fadeIn 0.3s ease-in-out forwards;
 }

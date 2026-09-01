@@ -1,6 +1,6 @@
 import React from "react";
-import { Sections } from "./components/sections";
-import Footer from "./components/layout/footer";
+import { Sections } from "../components/sections";
+import Footer from "../components/layout/footer";
 
 function HomeContainer() {
   return (
