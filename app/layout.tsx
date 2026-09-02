@@ -32,8 +32,17 @@ export const metadata: Metadata = {
     siteName: "Web Wizard Portfolio",
     locale: "",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hussam Ahmad Portfolio",
+      },
+    ],
   },
   twitter: {
+    images: "/opengraph-image.jpg",
     card: "summary_large_image",
     title: "Full-Stack WebWizerd",
     description:
