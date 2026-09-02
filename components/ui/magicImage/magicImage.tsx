@@ -6,7 +6,7 @@ import "./magicImage.css"
 function MagicImage() {
   return (
     <div className="image max-lg:hidden">
-      <Image src={images.wizard} alt="wizard" className="wizard"/>
+      <Image src={images.wizard} alt="wizard" className="wizard" priority/>
     </div>
   );
 }

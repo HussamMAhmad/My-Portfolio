@@ -6,7 +6,6 @@ import { useActiveSection } from "@/hooks/useAtiveSection";
 function Navbar() {
   const sectionIds = LINK_NAV_SECTION.map((link) => link.label);
   const active = useActiveSection(sectionIds);
-
   return (
     <ul className="links max-lg:hidden lg:flex">
       {LINK_NAV_SECTION.map((link) => (

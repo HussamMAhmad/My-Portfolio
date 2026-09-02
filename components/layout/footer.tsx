@@ -1,10 +1,9 @@
 "use client";
-
 import React from "react";
-import Link from "next/link";
 import SocialLink from "../ui/socialLinks/socialLink";
 import { LINK_SOCIAL_MEDIA , LINK_NAV_SECTION } from "@/data/constants";
 import { FaLongArrowAltUp } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -36,9 +35,9 @@ export default function Footer() {
             <ul className="flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6 text-[12px] md:text-[14px] font-medium text-text/80">
               {LINK_NAV_SECTION.map((item) => (
                 <li key={item.name}>
-                  <a href={item.label} className="hover:text-main transition-colors">
+                  <Link href={`#${item.label}`} className="hover:text-main transition-colors">
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

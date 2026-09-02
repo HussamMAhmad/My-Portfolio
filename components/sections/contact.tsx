@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import TitleSec from "../ui/title-sec";
 import { HiEnvelope } from "react-icons/hi2";
 import { RiLinkedinFill } from "react-icons/ri";
+import { submitContactForm } from "@/actions/nodemailer.action";
 
 export default function ContactSection() {
   const [loading, setLoading] = useState(false);
@@ -13,11 +14,23 @@ export default function ContactSection() {
     e.preventDefault();
     setLoading(true);
     setStatus("idle");
-
+    const formData = new FormData(e.currentTarget);
+    const formElement = e.currentTarget;
+    const dataPayload = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      subject: formData.get("subject") as string,
+      mes: formData.get("mes") as string,
+    };
     try {
-      // هنا يتم ربط الـ API الخاّص بك لإرسال البريد (مثلاً عبر Nodemailer أو Resend)
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setStatus("success");
+      const res = await submitContactForm({ data: dataPayload });
+      if (res?.success) {
+        setStatus("success");
+        formElement.reset();
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     } finally {
@@ -33,7 +46,6 @@ export default function ContactSection() {
       <TitleSec partOne="Contact" partTwo="Me!" />
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-12">
-        {/* الجانب الأيسر: معلومات التواصل المباشرة */}
         <div className="lg:col-span-2 p-8 rounded-3xl bg-primary-bg/40 border-solid border border-main/20 flex flex-col justify-between gap-6">
           <div>
             <h3 className="sm:text-[24px] text-[18px] font-bold text-text mb-3">
@@ -90,7 +102,6 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* الجانب الأيمن: نموذج التواصل */}
         <form
           onSubmit={handleSubmit}
           className="lg:col-span-3 p-8 rounded-3xl bg-primary-bg/40 border border-solid border-main/20 flex flex-col gap-5"
@@ -101,6 +112,7 @@ export default function ContactSection() {
                 Full Name
               </label>
               <input
+                name="name"
                 type="text"
                 required
                 placeholder="John Doe"
@@ -113,6 +125,7 @@ export default function ContactSection() {
                 Email Address
               </label>
               <input
+                name="email"
                 type="email"
                 required
                 placeholder="john@example.com"
@@ -127,6 +140,7 @@ export default function ContactSection() {
                 Phone Number
               </label>
               <input
+                name="phone"
                 type="tel"
                 placeholder="+963 ..."
                 className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text sm:text-[12px] text-[10px] transition-colors"
@@ -138,6 +152,7 @@ export default function ContactSection() {
                 Subject
               </label>
               <input
+                name="subject"
                 type="text"
                 required
                 placeholder="Project Inquiry"
@@ -147,8 +162,11 @@ export default function ContactSection() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="sm:text-[12px] text-[10px] font-medium text-text/80">Message</label>
+            <label className="sm:text-[12px] text-[10px] font-medium text-text/80">
+              Message
+            </label>
             <textarea
+              name="mes"
               rows={5}
               required
               placeholder="Tell me about your project..."

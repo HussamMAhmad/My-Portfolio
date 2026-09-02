@@ -69,7 +69,7 @@
     }
 
     html {
-        @apply overflow-x-hidden max-md:text-[50%];
+        @apply overflow-x-hidden max-md:text-[50%] scroll-pt-[90px];
     }
 
     body {
@@ -100,7 +100,6 @@
     }
 }
 
-@layer utilities {}
 
 .scrollbar-hide {
     -ms-overflow-style: none;

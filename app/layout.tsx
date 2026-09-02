@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/layout/Header";
 import { Poppins } from "next/font/google";
@@ -10,18 +9,8 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Full-Stack WebWizerd",
+  title: "Web Wizerd",
   description:
     "Web and Portfolio for WebWizerd projects Specializing in building integrated and fast web applications using React , Next.js , Nodejs",
   keywords: [
@@ -69,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} h-full antialiased`}
+      className={` ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         <Header />
