@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || ""),
+  metadataBase: new URL("https://my-portfolio-one-sable-87.vercel.app"),
   title: { default: "Web Wizard", template: "%s | Web Wizard" },
   description:
     "Web and Portfolio for Web Wizard projects Specializing in building integrated and fast web applications using React , Next.js , Nodejs",
