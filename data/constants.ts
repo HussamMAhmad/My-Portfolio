@@ -120,6 +120,7 @@ export const PROJECTS_DATA= [
   {
     id: "sub-tracker-pg",
     title: "Advanced Subscription Manager",
+    category: "fullstack",
     description:
       "A relational subscription management architecture with automated alerts, secure authentication, and rate limiting.",
     image: imageProjects.project1,
@@ -130,6 +131,7 @@ export const PROJECTS_DATA= [
   {
     id: "sub-tracker-mongo",
     title: "Smart Subscription Tracking System",
+    category: "fullstack",
     description:
       "Full-stack web platform built to track recurring payments with scheduled background workflows and dynamic HTML email notifications.",
     image: imageProjects.project2,
@@ -146,6 +148,7 @@ export const PROJECTS_DATA= [
   {
     id: "boxtasks",
     title: "BoxTasks - Task Management Platform",
+    category: "frontend",
     description:
       "A responsive task handling interface featuring state persistence, dynamic filtering, and interactive UI components.",
     image: imageProjects.project3,
@@ -153,4 +156,11 @@ export const PROJECTS_DATA= [
     githubUrl: "https://github.com/hussammahmad",
     liveUrl: "https://example.com",
   },
+];
+
+export const CATEGORIES = [
+  { label: "All Projects", value: "all" },
+  { label: "Full-Stack", value: "fullstack" },
+  { label: "Frontend", value: "frontend" },
+  { label: "Backend", value: "backend" },
 ];

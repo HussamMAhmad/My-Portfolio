@@ -2,15 +2,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import images from "@/public/images";
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./navbar";
 import { Menu, X } from "lucide-react";
 import NavbarMobile from "./navbar_mobile/navbar-mobile";
+import { usePathname } from "next/navigation";
 
 function Header() {
   const [toggle, setToggle] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
- useEffect(() => {
+  const pathname = usePathname();
+  const isProjectspage = pathname === "/projects";
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
         setIsSticky(true);
@@ -28,8 +31,10 @@ function Header() {
 
   const stickyClass = isSticky ? "bg-primary-bg" : "bg-transparent";
   return (
-    <header className={`header ${stickyClass} transition-colors duration-300`}>
-      <Link href="#home" className="logo">
+    <header
+      className={`header ${isProjectspage ? "bg-primary-bg" : stickyClass} transition-colors duration-300`}
+    >
+      <Link href="/" className="logo">
         <Image
           src={images.icon}
           alt="Web Wizerd logo"

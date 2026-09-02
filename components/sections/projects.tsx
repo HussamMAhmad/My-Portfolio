@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import TitleSec from "@/components/ui/title-sec";
 import ProjectCard from "../ui/projectCard";
-import { MdArrowRightAlt } from "react-icons/md";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { PROJECTS_DATA } from "@/data/constants";
 
 export default function ProjectsSection() {
@@ -25,7 +25,7 @@ export default function ProjectsSection() {
           className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-main/10 border border-main/30 text-main font-semibold text-[14px] hover:bg-main hover:text-primary-bg transition-all duration-300 group shadow-md"
         >
           <span>View All Projects</span>
-          <MdArrowRightAlt className="text-[20px] group-hover:translate-x-1 transition-transform" />
+          <HiOutlineArrowNarrowRight className="text-[20px] group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
     </section>
