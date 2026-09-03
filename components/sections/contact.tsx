@@ -58,11 +58,11 @@ export default function ContactSection() {
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-main/10 flex items-center justify-center text-main text-[16px] sm:text-[20px]">
+                <div className="w-12 h-12 rounded-2xl bg-main/10 flex items-center justify-center text-main text-[18px] sm:text-[20px]">
                   <HiEnvelope />
                 </div>
                 <div>
-                  <span className="sm:text-[12px] text-[10px] text-text/50 block font-mono">
+                  <span className="text-[12px] text-text/50 block font-mono">
                     Mail Me
                   </span>
                   <a
@@ -75,11 +75,11 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-main/10 flex items-center justify-center text-main  text-[16px] sm:text-[20px]">
+                <div className="w-12 h-12 rounded-2xl bg-main/10 flex items-center justify-center text-main  text-[18px] sm:text-[20px]">
                   <RiLinkedinFill />
                 </div>
                 <div>
-                  <span className="sm:text-[12px] text-[10px] text-text/50 block font-mono">
+                  <span className="text-[12px] text-text/50 block font-mono">
                     LinkedIn
                   </span>
                   <a
@@ -96,7 +96,7 @@ export default function ContactSection() {
           </div>
 
           <div className="pt-6 border-solid border-t border-main/10">
-            <span className="sm:text-[12px] text-[10px] text-text/60">
+            <span className="text-[12px] text-text/60">
               Based in Syria & Available for remote work worldwide.
             </span>
           </div>
@@ -108,7 +108,7 @@ export default function ContactSection() {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="flex flex-col gap-2">
-              <label className="sm:text-[12px] text-[10px] font-medium text-text/80">
+              <label className="text-[12px] font-medium text-text/80">
                 Full Name
               </label>
               <input
@@ -116,12 +116,12 @@ export default function ContactSection() {
                 type="text"
                 required
                 placeholder="John Doe"
-                className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text sm:text-[12px] text-[10px] transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text text-[12px] transition-colors"
               />
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="sm:text-[12px] text-[10px] font-medium text-text/80">
+              <label className="text-[12px] font-medium text-text/80">
                 Email Address
               </label>
               <input
@@ -129,26 +129,26 @@ export default function ContactSection() {
                 type="email"
                 required
                 placeholder="john@example.com"
-                className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text sm:text-[12px] text-[10px] transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text text-[12px] transition-colors"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="flex flex-col gap-2">
-              <label className="sm:text-[12px] text-[10px] font-medium text-text/80">
+              <label className="text-[12px] font-medium text-text/80">
                 Phone Number
               </label>
               <input
                 name="phone"
                 type="tel"
                 placeholder="+963 ..."
-                className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text sm:text-[12px] text-[10px] transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text text-[12px] transition-colors"
               />
             </div>
 
             <div className="flex flex-col gap-2">
-              <label className="sm:text-[12px] text-[10px] font-medium text-text/80">
+              <label className="text-[12px] font-medium text-text/80">
                 Subject
               </label>
               <input
@@ -156,13 +156,13 @@ export default function ContactSection() {
                 type="text"
                 required
                 placeholder="Project Inquiry"
-                className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text sm:text-[12px] text-[10px] transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text text-[12px] transition-colors"
               />
             </div>
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="sm:text-[12px] text-[10px] font-medium text-text/80">
+            <label className="text-[12px] font-medium text-text/80">
               Message
             </label>
             <textarea
@@ -170,25 +170,25 @@ export default function ContactSection() {
               rows={5}
               required
               placeholder="Tell me about your project..."
-              className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text sm:text-[12px] text-[10px] transition-colors resize-none"
+              className="w-full px-4 py-3 rounded-xl bg-primary-bg/50 border border-solid border-main/20 focus:border-main focus:outline-none text-text text-[12px] transition-colors resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="mt-2 w-full sm:w-auto px-8 py-3.5 rounded-xl bg-main text-primary-bg font-semibold sm:text-[12px] text-[10px] hover:opacity-90 transition-all cursor-pointer disabled:opacity-50 self-end"
+            className="mt-2 w-full sm:w-auto px-8 py-3.5 rounded-xl bg-main text-primary-bg font-semibold text-[12px] hover:opacity-90 transition-all cursor-pointer disabled:opacity-50 self-end"
           >
             {loading ? "Sending Message..." : "Send Message"}
           </button>
 
           {status === "success" && (
-            <p className="sm:text-[12px] text-[10px] text-green-400 font-medium text-center mt-2">
+            <p className="text-[12px] text-green-400 font-medium text-center mt-2">
               Message sent successfully! I'll get back to you soon.
             </p>
           )}
           {status === "error" && (
-            <p className="sm:text-[12px] text-[10px] text-red-400 font-medium text-center mt-2">
+            <p className="text-[12px] text-red-400 font-medium text-center mt-2">
               Something went wrong. Please try again later.
             </p>
           )}
