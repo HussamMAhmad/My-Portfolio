@@ -12,8 +12,8 @@ function SocialLink({ icon: Icon, url }: ButtonPorps) {
   if (!Icon) return null;
 
   return (
-    <Link href={url} className="link">
-      <Icon className="icon"/>
+    <Link href={url} target="_blank" className="link">
+      <Icon className="icon" />
     </Link>
   );
 }

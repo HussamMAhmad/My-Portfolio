@@ -3,6 +3,7 @@ import {
   RiInstagramFill,
   RiGithubFill,
   RiTwitterXFill,
+  RiLinkedinFill ,
 } from "react-icons/ri";
 
 import { imageProjects } from "@/public/projects";
@@ -26,6 +27,10 @@ export const LINK_SOCIAL_MEDIA = [
   {
     url: "https://www.instagram.com/w.wsy0?igsh=OWRoMTVlYjdnZnBk",
     icon: RiInstagramFill,
+  },
+   {
+    url: "https://www.linkedin.com/in/web-wizard-89758a3a8",
+    icon: RiLinkedinFill,
   },
 ];
 

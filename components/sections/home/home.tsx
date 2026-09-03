@@ -30,9 +30,7 @@ export default function Home() {
             systems with Node.js, TypeScript, PostgreSQL, and MongoDB.
           </p>
           <div className="buttons flex gap-8">
-            <Link href="#contact">
-              <ButtonIn text="Hire me" inOut={true} />
-            </Link>
+            <ButtonIn text="Hire me" inOut={true} contact={true} />
             <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <ButtonIn text="My Resume" inOut={false} />
             </Link>
