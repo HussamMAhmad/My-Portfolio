@@ -40,6 +40,8 @@ function Header() {
           alt="Web Wizerd logo"
           className="w-12.5 h-12.5"
           priority
+          width={64}
+          height={67}
         />
         <Image
           src={images.webWizerd}
