@@ -9,8 +9,11 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+const baseUrlString = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || "https://web-wizard-hussam.vercel.app";
+const baseUrl = new URL(baseUrlString);
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.BASE_URL!),
+  metadataBase: baseUrl,
   title: { default: "Web Wizard", template: "%s | Web Wizard" },
   description:
     "Web and Portfolio for Web Wizard projects Specializing in building integrated and fast web applications using React , Next.js , Nodejs",
@@ -23,12 +26,12 @@ export const metadata: Metadata = {
     "مطور ويب",
     "معرض اعمال",
   ],
-  authors: [{ name: "Web Wizard", url: process.env.BASE_URL! }],
+  authors: [{ name: "Web Wizard", url: baseUrlString }],
   creator: "Hussam Ahmad",
   openGraph: {
     title: "Full-Stack Web Wizard",
     description: "build web application with modern features",
-    url: process.env.BASE_URL,
+    url:baseUrlString,
     siteName: "Web Wizard Portfolio",
     locale: "en_US",
     type: "website",
