@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || ""),
+  metadataBase: new URL(process.env.BASE_URL!),
   title: { default: "Web Wizard", template: "%s | Web Wizard" },
   description:
     "Web and Portfolio for Web Wizard projects Specializing in building integrated and fast web applications using React , Next.js , Nodejs",
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     "مطور ويب",
     "معرض اعمال",
   ],
-  authors: [{ name: "Web Wizard", url: process.env.NEXT_PUBLIC_BASE_URL || "" }],
+  authors: [{ name: "Web Wizard", url: process.env.BASE_URL! }],
   creator: "Hussam Ahmad",
   openGraph: {
     title: "Full-Stack Web Wizard",
     description: "build web application with modern features",
-    url: "",
+    url: process.env.BASE_URL,
     siteName: "Web Wizard Portfolio",
-    locale: "",
+    locale: "en_US",
     type: "website",
     images: [
       {
