@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { PROJECTS_DATA } from "@/data/constants";
+import { PROJECTS_DATA } from "@/data/data-projects";
 import TitleSec from "@/components/ui/title-sec";
 import { MdOutlineSearch, MdOutlineFolderOpen } from "react-icons/md";
 import ProjectCard from "@/components/ui/projectCard";

@@ -31,7 +31,7 @@ export default function Home() {
           </p>
           <div className="buttons flex gap-8">
             <ButtonIn text="Hire me" inOut={true} contact={true} />
-            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" prefetch={false}>
               <ButtonIn text="My Resume" inOut={false} />
             </Link>
           </div>

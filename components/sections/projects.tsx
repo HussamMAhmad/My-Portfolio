@@ -3,7 +3,7 @@ import Link from "next/link";
 import TitleSec from "@/components/ui/title-sec";
 import ProjectCard from "../ui/projectCard";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { PROJECTS_DATA } from "@/data/constants";
+import { TOP_PROJECTS } from "@/data/data-projects";
 
 export default function ProjectsSection() {
   return (
@@ -14,7 +14,7 @@ export default function ProjectsSection() {
       <TitleSec partOne="My" partTwo="Projects" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 w-full">
-        {PROJECTS_DATA.map((project) => (
+        {TOP_PROJECTS.map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}
       </div>

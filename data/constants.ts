@@ -6,7 +6,6 @@ import {
   RiLinkedinFill ,
 } from "react-icons/ri";
 
-import { imageProjects } from "@/public/projects";
 
 export const LINK_NAV_SECTION = [
   { name: "Home", label: "home" },
@@ -118,48 +117,6 @@ const PROJECTS_WITH_DATA = [
     urlSource: "",
     urlDemo: "",
     image: "",
-  },
-];
-
-export const PROJECTS_DATA= [
-  {
-    id: "sub-tracker-pg",
-    title: "Advanced Subscription Manager",
-    category: "fullstack",
-    description:
-      "A relational subscription management architecture with automated alerts, secure authentication, and rate limiting.",
-    image: imageProjects.project1,
-    tags: ["TypeScript", "PostgreSQL", "Prisma", "Node.js", "JWT", "Arcjet"],
-    githubUrl: "https://github.com/hussammahmad",
-    liveUrl: "https://example.com",
-  },
-  {
-    id: "sub-tracker-mongo",
-    title: "Smart Subscription Tracking System",
-    category: "fullstack",
-    description:
-      "Full-stack web platform built to track recurring payments with scheduled background workflows and dynamic HTML email notifications.",
-    image: imageProjects.project2,
-    tags: [
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Mongoose",
-      "Upstash",
-      "Nodemailer",
-    ],
-    githubUrl: "https://github.com/hussammahmad",
-  },
-  {
-    id: "boxtasks",
-    title: "BoxTasks - Task Management Platform",
-    category: "frontend",
-    description:
-      "A responsive task handling interface featuring state persistence, dynamic filtering, and interactive UI components.",
-    image: imageProjects.project3,
-    tags: ["React.js", "Material UI", "Context API", "Tailwind CSS"],
-    githubUrl: "https://github.com/hussammahmad",
-    liveUrl: "https://example.com",
   },
 ];
 

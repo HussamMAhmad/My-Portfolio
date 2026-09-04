@@ -1,24 +1,26 @@
 import React from "react";
-import {RiGithubFill , RiExternalLinkFill } from "react-icons/ri";
+import { RiGithubFill, RiExternalLinkFill, RiCodeSSlashLine, RiServerLine } from "react-icons/ri";
 import Link from "next/link";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 
-interface Project {
+export interface Project {
   id: string;
   title: string;
   description: string;
   image: StaticImageData | string;
   tags: string[];
-  githubUrl: string;
+  githubUrl?: string;
+  githubUrls?: {
+    frontend?: string;
+    backend?: string;
+  };
   liveUrl?: string;
 }
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div
-      className="group rounded-3xl bg-primary-bg/40 border border-main/20 hover:border-main/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg"
-    >
+    <div className="group rounded-3xl bg-primary-bg/40 border border-main/20 hover:border-main/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg">
       <div className="relative w-full md:h-48 h-100 overflow-hidden bg-primary-bg/50">
         <Image
           src={project.image}
@@ -49,24 +51,55 @@ function ProjectCard({ project }: { project: Project }) {
               </span>
             ))}
           </div>
-
-          <div className="flex items-center gap-4 pt-4 border-t border-main/10">
-            <Link
-              href={project.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-1.5 text-[12px] font-semibold text-text/80 hover:text-main transition-colors"
-            >
-              <RiGithubFill className="text-[18px]" />
-              <span>Source Code</span>
-            </Link>
-
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-main/10">
+            <div className="flex items-center gap-3 flex-wrap">
+              {project.githubUrls ? (
+                <>
+                  {project.githubUrls.frontend && (
+                    <Link
+                      href={project.githubUrls.frontend}
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Frontend Repository"
+                      className="flex items-center gap-1.5 text-[12px] font-semibold text-text/80 hover:text-main transition-colors bg-main/5 px-2.5 py-1 rounded-lg border border-main/10 hover:border-main/30"
+                    >
+                      <RiCodeSSlashLine className="text-[15px] text-main" />
+                      <span>Frontend</span>
+                    </Link>
+                  )}
+                  {project.githubUrls.backend && (
+                    <Link
+                      href={project.githubUrls.backend}
+                      target="_blank"
+                      rel="noreferrer"
+                      title="Backend Repository"
+                      className="flex items-center gap-1.5 text-[12px] font-semibold text-text/80 hover:text-main transition-colors bg-main/5 px-2.5 py-1 rounded-lg border border-main/10 hover:border-main/30"
+                    >
+                      <RiServerLine className="text-[15px] text-main" />
+                      <span>Backend</span>
+                    </Link>
+                  )}
+                </>
+              ) : (
+                project.githubUrl && (
+                  <Link
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-1.5 text-[12px] font-semibold text-text/80 hover:text-main transition-colors"
+                  >
+                    <RiGithubFill className="text-[18px]" />
+                    <span>Source Code</span>
+                  </Link>
+                )
+              )}
+            </div>
             {project.liveUrl && (
               <Link
                 href={project.liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 text-[12px] font-semibold text-main hover:underline transition-all"
+                className="flex items-center gap-1.5 text-[12px] font-semibold text-main hover:underline transition-all ml-auto"
               >
                 <RiExternalLinkFill className="text-[18px]" />
                 <span>Live Demo</span>
