@@ -33,16 +33,16 @@ export const LINK_SOCIAL_MEDIA = [
   },
 ];
 
-export const EDUCATION_DATA = [
+export const EDUCATION_DATA =[
   {
-    period: "2020 - 2026",
-    title: "Communications Engineering Degree",
+    period: "2019 - 2026",
+    title: "Electronics & Communications Engineering Degree",
     subtitle: "Homs University",
     description:
       "Built a solid foundation in signal processing, systems engineering, and analytical problem-solving, providing a seamless transition into software and web architecture.",
   },
   {
-    period: "2022 - 2025",
+    period: "2023 - Present",
     title: "Full-Stack Web Development",
     subtitle: "Self-Directed & Practical Projects",
     description:

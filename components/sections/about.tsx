@@ -66,7 +66,7 @@ export default function About() {
             </div>
             <div className="p-4 border border-main/30 rounded-lg text-center bg-primary-bg">
               <span className="block lg:text-2xl text-[20px] font-bold text-main">
-                30+
+                15+
               </span>
               <span className="lg:text-xs text-[10px] text-text">
                 Projects Built

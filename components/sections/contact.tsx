@@ -66,10 +66,10 @@ export default function ContactSection() {
                     Mail Me
                   </span>
                   <a
-                    href="mailto:your.email@example.com"
+                    href="mailto:webwizardbus@gmail.com"
                     className="sm:text-[14px] text-[12px] font-semibold text-text hover:text-main transition-colors"
                   >
-                    your.email@example.com
+                    webwizardbus@gmail.com
                   </a>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function ContactSection() {
                     LinkedIn
                   </span>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/web-wizard-89758a3a8"
                     target="_blank"
                     rel="noreferrer"
                     className="sm:text-[14px] text-[12px] font-semibold text-text hover:text-main transition-colors"
