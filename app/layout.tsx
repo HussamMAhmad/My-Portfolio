@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "مطور ويب",
     "معرض اعمال",
   ],
+  verification : {
+    google : "XslVRJcspB9kFEtTGy4ml8EcRM1BxGtxTblMdrXdI8w"
+  },
   authors: [{ name: "Web Wizard", url: baseUrlString }],
   creator: "Hussam Ahmad",
   openGraph: {
