@@ -3,9 +3,8 @@ import {
   RiInstagramFill,
   RiGithubFill,
   RiTwitterXFill,
-  RiLinkedinFill ,
+  RiLinkedinFill,
 } from "react-icons/ri";
-
 
 export const LINK_NAV_SECTION = [
   { name: "Home", label: "home" },
@@ -27,13 +26,13 @@ export const LINK_SOCIAL_MEDIA = [
     url: "https://www.instagram.com/w.wsy0?igsh=OWRoMTVlYjdnZnBk",
     icon: RiInstagramFill,
   },
-   {
+  {
     url: "https://www.linkedin.com/in/web-wizard-89758a3a8",
     icon: RiLinkedinFill,
   },
 ];
 
-export const EDUCATION_DATA =[
+export const EDUCATION_DATA = [
   {
     period: "2019 - 2026",
     title: "Electronics & Communications Engineering Degree",
@@ -67,9 +66,13 @@ export const TECHNICAL_ECOSYSTEM_MAIN = [
     skills: [
       "React.js",
       "Next.js",
+      "Refine",
       "TypeScript",
       "Tailwind CSS",
+      "Shadcn UI",
+      "Material UI",
       "JavaScript (ES6+)",
+      "Bootstrap",
     ],
   },
   {
@@ -84,7 +87,11 @@ export const TECHNICAL_ECOSYSTEM_MAIN = [
       "PostgreSQL",
       "Prisma ORM",
       "MongoDB",
+      "Mongoose",
       "JWT Auth",
+      "Better Auth",
+      "Appwrite",
+      "Custom SMTP",
     ],
   },
 ];
@@ -97,12 +104,13 @@ export const TECHNICAL_ECOSYSTEM_SUB = [
       "Arcjet Protection",
       "Nodemailer",
       "RESTful Architecture",
+      "Sentry (Monitoring)",
     ],
     title: "Workflows & Security",
   },
   {
     id: "tools",
-    skills: ["Git & GitHub", "Vite", "Photoshop (UI Assets)", "Material UI"],
+    skills: ["Git & GitHub", "Vite", "vercel", "Photoshop (UI Assets)"],
     title: "Tools & Graphics",
   },
 ];
