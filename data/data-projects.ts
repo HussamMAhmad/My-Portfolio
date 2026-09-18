@@ -185,6 +185,26 @@ export const PROJECTS_DATA = [
     githubUrl: "https://github.com/HussamMAhmad/Health-Care",
     liveUrl: "https://health-care-alpha-flax.vercel.app/",
   },
+  {
+  id: "react-hook-form-zod-signup",
+  title: "Interactive Sign-Up Form with Zod Validation",
+  category: "frontend",
+  featured: false,
+  description:
+    "A responsive authentication sign-up form built with React and Tailwind CSS. Features client-side schema validation using React Hook Form and Zod, real-time error handling, custom UI iconography, and interactive feedback toasts upon successful submission.",
+  tags: [
+    "React 19",
+    "React Hook Form",
+    "Zod Validation",
+    "Tailwind CSS",
+    "Lucide React",
+    "React Icons",
+    "JavaScript",
+  ],
+  image: imageProjects.project10,
+  githubUrl: "https://github.com/HussamMAhmad/Registration-Form",
+  liveUrl: "https://registration-form-roan-three.vercel.app/",
+}
 ];
 
 export const TOP_PROJECTS = PROJECTS_DATA.filter((project) => {

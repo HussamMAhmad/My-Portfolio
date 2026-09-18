@@ -67,6 +67,8 @@ export const TECHNICAL_ECOSYSTEM_MAIN = [
       "React.js",
       "Next.js",
       "Refine",
+      "React Hook Form",
+      "Zod",
       "TypeScript",
       "Tailwind CSS",
       "Shadcn UI",
