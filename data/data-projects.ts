@@ -38,9 +38,11 @@ export const PROJECTS_DATA = [
       "Next.js 15",
       "TypeScript",
       "Tailwind CSS",
+      "Shadcn UI",
       "Better Auth",
       "Finnhub API",
       "Inngest",
+      "nodemailer",
     ],
     image: imageProjects.project2,
     githubUrl: "https://github.com/HussamMAhmad/signalist_stock-tracker-app",
@@ -50,7 +52,7 @@ export const PROJECTS_DATA = [
     id: "subtrack-prisma-api",
     title: "SubTrack - Subscription Tracker API",
     category: "backend",
-    featured: true,
+    featured: false,
     description:
       "A robust backend system built with Express.js to manage subscriptions and automate renewals. Features an event-driven Smart Notification Engine powered by Upstash Workflow and security shielding via Arcjet.",
     tags: [
@@ -160,6 +162,28 @@ export const PROJECTS_DATA = [
     image: imageProjects.project8,
     githubUrl: "https://github.com/HussamMAhmad/wether-app",
     liveUrl: "https://wether-app-mauve.vercel.app/",
+  },
+  {
+    id: "carepulse-healthcare-platform",
+    title: "CarePulse - Healthcare Management Platform",
+    category: "fullstack",
+    featured: true,
+    description:
+      "A full-stack healthcare platform for patient registration, appointment scheduling, and medical record management. Features real-time UI synchronization via Next.js Server Actions, transactional email notifications via Custom SMTP, enforced dark mode, and production performance monitoring.",
+    tags: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Appwrite",
+      "Custom SMTP",
+      "Sentry",
+      "Vercel",
+    ],
+    image: imageProjects.project9,
+    githubUrl: "https://github.com/HussamMAhmad/Health-Care",
+    liveUrl: "https://health-care-alpha-flax.vercel.app/",
   },
 ];
 
