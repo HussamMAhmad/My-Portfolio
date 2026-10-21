@@ -220,7 +220,7 @@ export const PROJECTS_DATA = [
     "Prisma",
     "Cloudinary",
   ],
-  image: "",
+  image:imageProjects.project11,
   liveUrl: "https://qmenu-six.vercel.app/",
 }
 ];
