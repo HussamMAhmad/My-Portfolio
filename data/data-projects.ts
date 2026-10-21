@@ -31,7 +31,7 @@ export const PROJECTS_DATA = [
     id: "stock-tracker-platform",
     title: "Stock Tracker Platform",
     category: "fullstack",
-    featured: true,
+    featured: false,
     description:
       "A real-time financial dashboard built with Next.js 15, Finnhub API, Better Auth, and Inngest. Features stock market search, personalized watchlists, and event-driven background processing.",
     tags: [
@@ -204,6 +204,24 @@ export const PROJECTS_DATA = [
   image: imageProjects.project10,
   githubUrl: "https://github.com/HussamMAhmad/Registration-Form",
   liveUrl: "https://registration-form-roan-three.vercel.app/",
+},
+{
+  id: "qmenu-digital-menu-platform",
+  title: "QMenu – Digital Restaurant Menu Platform",
+  category: "fullstack",
+  featured: true,
+  description:
+    "A modern full-stack digital menu platform for restaurants. Built with Next.js and React 19, featuring real-time menu management, dynamic catalog browsing, Prisma ORM database management, and Cloudinary media integration with client-side validation.",
+  tags: [
+    "Next.js",
+    "React 19",
+    "TypeScript",
+    "Tailwind CSS",
+    "Prisma",
+    "Cloudinary",
+  ],
+  image: "",
+  liveUrl: "https://qmenu-six.vercel.app/",
 }
 ];
 
