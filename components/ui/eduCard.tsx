@@ -1,5 +1,9 @@
+"use client";
+
 import React from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { BsCalendarDateFill } from "react-icons/bs";
+import { HiOutlineAcademicCap } from "react-icons/hi2";
 
 interface Education {
   period: string;
@@ -8,25 +12,108 @@ interface Education {
   description: string;
 }
 
-function EduCard({ data }: { data: Education }) {
+interface EduCardProps {
+  data: Education;
+  index: number;
+}
+
+function EduCard({ data, index }: EduCardProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <div className="relative p-6 rounded-2xl bg-secondary-bg/40 border border-main/20 hover:border-main/60 transition-all duration-300 flex flex-col justify-between shadow-lg hover:-translate-y-1">
-      <div>
-        <div className="flex items-center gap-2 text-main text-[12px] sm:text-[14px] font-semibold mb-3">
-          <BsCalendarDateFill />
-          <span>{data.period}</span>
+    <motion.article
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 25 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        duration: 0.5,
+        delay: shouldReduceMotion ? 0 : index * 0.12,
+      }}
+      whileHover={shouldReduceMotion ? undefined : { y: -5 }}
+      className="
+        group relative isolate flex h-full min-h-[290px]
+        flex-col overflow-hidden rounded-2xl
+        bg-secondary-bg/40 p-[1px]
+      "
+    >
+{/* Animated Border Beam */}
+{!shouldReduceMotion && (
+  <motion.div
+    aria-hidden="true"
+    className="
+      pointer-events-none absolute
+      -inset-[100%]
+      bg-[conic-gradient(from_0deg,transparent_0deg,transparent_300deg,#00abf0_345deg,transparent_360deg)]
+    "
+    animate={{ rotate: 360 }}
+    transition={{
+      duration: 6,
+      repeat: Infinity,
+      ease: "linear",
+    }}
+  />
+)}
+
+      {/* Card Content */}
+      <div
+        className="
+          relative z-10 flex h-full flex-col
+          rounded-[15px] bg-secondary-bg
+          p-6
+        "
+      >
+        {/* Period */}
+        <div className="mb-6 flex items-center gap-3">
+          <div className="
+            flex h-10 w-10 items-center justify-center
+            rounded-xl border border-main/10
+            bg-main/5 text-main
+          ">
+            <BsCalendarDateFill size={16} />
+          </div>
+
+          <span className="text-sm font-semibold text-main">
+            {data.period}
+          </span>
         </div>
-        <h3 className="text-[16px] sm:text-[20px] font-bold text-text mb-1">
+
+        {/* Icon */}
+        <div className="
+          mb-4 flex h-11 w-11 items-center justify-center
+          rounded-xl bg-main/5 text-main
+        ">
+          <HiOutlineAcademicCap size={26} />
+        </div>
+
+        {/* Title */}
+        <h3 className="mb-2 text-lg font-bold leading-snug text-text sm:text-xl">
           {data.title}
         </h3>
-        <p className="text-[10px] sm:text-[12px] font-medium text-main/80 mb-4">
+
+        {/* Subtitle */}
+        <p className="mb-4 text-sm font-semibold text-main">
           {data.subtitle}
         </p>
-        <p className="text-text/70 text-[12px] md:text-[14px] leading-relaxed">
+
+        {/* Description */}
+        <p className="text-sm leading-7 text-text">
           {data.description}
         </p>
+
+        {/* Bottom Accent */}
+        <div className="mt-auto pt-7">
+          <div className="h-px w-full overflow-hidden bg-main/10">
+            <div
+              className="
+                h-full w-0 bg-main
+                transition-all duration-500
+                group-hover:w-full
+              "
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </motion.article>
   );
 }
 

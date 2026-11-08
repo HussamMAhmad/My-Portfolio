@@ -1,8 +1,14 @@
+"use client";
+
 import React from "react";
-import { RiGithubFill, RiExternalLinkFill, RiCodeSSlashLine, RiServerLine } from "react-icons/ri";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { StaticImageData } from "next/image";
-import Image from "next/image";
+import {
+  RiGithubFill,
+  RiExternalLinkFill,
+  RiCodeSSlashLine,
+  RiServerLine,
+} from "react-icons/ri";
 
 export interface Project {
   id: string;
@@ -20,64 +26,231 @@ export interface Project {
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group rounded-3xl bg-primary-bg/40 border border-main/20 hover:border-main/60 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg">
-      <div className="relative w-full md:h-48 h-100 overflow-hidden bg-primary-bg/50">
+    <article
+      className="
+        group
+        flex
+        h-full
+        flex-col
+        overflow-hidden
+        rounded-2xl
+        border
+        border-main/10
+        bg-primary-bg/40
+        transition-all
+        duration-300
+
+        hover:-translate-y-1
+        hover:border-main/25
+        hover:bg-primary-bg/60
+      "
+    >
+      {/* Image */}
+      <div
+        className="
+          relative
+          aspect-[16/10]
+          w-full
+          overflow-hidden
+          bg-primary-bg
+        "
+      >
         <Image
           src={project.image}
-          alt={project.title}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          alt={`${project.title} project preview`}
+          fill
+          sizes="
+            (max-width: 640px) 100vw,
+            (max-width: 1024px) 50vw,
+            33vw
+          "
+          className="
+            object-cover
+            transition-transform
+            duration-700
+            ease-out
+            group-hover:scale-[1.03]
+          "
+        />
+
+        {/* Very subtle image overlay */}
+        <div
+          aria-hidden="true"
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            bg-gradient-to-t
+            from-primary-bg/35
+            to-transparent
+          "
         />
       </div>
 
-      <div className="p-6 flex flex-col flex-grow justify-between">
+      {/* Content */}
+      <div
+        className="
+          flex
+          flex-1
+          flex-col
+          p-5
+          sm:p-6
+        "
+      >
+        {/* Project title */}
         <div>
-          <h3 className="text-[16px] sm:text-[20px] font-bold text-text mb-2 group-hover:text-main transition-colors">
+          <h3
+            className="
+              text-lg
+              font-semibold
+              tracking-tight
+              text-text
+              transition-colors
+              duration-300
+              group-hover:text-main
+              sm:text-xl
+            "
+          >
             {project.title}
           </h3>
-          <p className="text-text/70 text-[12px] sm:text-[14px] leading-relaxed mb-6">
+
+          <p
+            className="
+              mt-3
+              text-sm
+              leading-6
+              text-text
+              sm:leading-7
+            "
+          >
             {project.description}
           </p>
         </div>
 
-        <div>
-          <div className="flex flex-wrap gap-1.5 mb-6">
-            {project.tags.map((tag, idx) => (
+        {/* Bottom */}
+        <div className="mt-auto pt-6">
+          {/* Tags */}
+          <div className="flex flex-wrap gap-1.5">
+            {project.tags.map((tag) => (
               <span
-                key={idx}
-                className="px-2.5 py-1 rounded-md bg-main/10 text-main font-mono text-[11px] border border-main/20"
+                key={tag}
+                className="
+                  border
+                  border-main/10
+                  bg-main/5
+                  px-2.5
+                  py-1
+                  text-[10px]
+                  font-medium
+                  text-main
+                  transition-colors
+                  duration-300
+
+                  group-hover:border-main/15
+
+                  sm:text-[11px]
+                "
               >
                 {tag}
               </span>
             ))}
           </div>
-          <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-main/10">
-            <div className="flex items-center gap-3 flex-wrap">
+
+          {/* Divider */}
+          <div
+            aria-hidden="true"
+            className="
+              my-5
+              h-px
+              w-full
+              bg-main/10
+            "
+          />
+
+          {/* Links */}
+          <div
+            className="
+              flex
+              min-h-7
+              flex-wrap
+              items-center
+              justify-between
+              gap-3
+            "
+          >
+            {/* GitHub */}
+            <div className="flex flex-wrap items-center gap-2">
               {project.githubUrls ? (
                 <>
                   {project.githubUrls.frontend && (
                     <Link
                       href={project.githubUrls.frontend}
                       target="_blank"
-                      rel="noreferrer"
-                      title="Frontend Repository"
-                      className="flex items-center gap-1.5 text-[12px] font-semibold text-text/80 hover:text-main transition-colors bg-main/5 px-2.5 py-1 rounded-lg border border-main/10 hover:border-main/30"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.title} frontend repository`}
+                      className="
+                        inline-flex
+                        items-center
+                        gap-1.5
+                        text-xs
+                        font-medium
+                        text-text
+                        transition-colors
+                        duration-300
+                        hover:text-main
+                        focus:outline-none
+                        focus-visible:ring-2
+                        focus-visible:ring-main
+                      "
                     >
-                      <RiCodeSSlashLine className="text-[15px] text-main" />
+                      <RiCodeSSlashLine
+                        aria-hidden="true"
+                        className="text-base text-main"
+                      />
+
                       <span>Frontend</span>
                     </Link>
                   )}
+
                   {project.githubUrls.backend && (
-                    <Link
-                      href={project.githubUrls.backend}
-                      target="_blank"
-                      rel="noreferrer"
-                      title="Backend Repository"
-                      className="flex items-center gap-1.5 text-[12px] font-semibold text-text/80 hover:text-main transition-colors bg-main/5 px-2.5 py-1 rounded-lg border border-main/10 hover:border-main/30"
-                    >
-                      <RiServerLine className="text-[15px] text-main" />
-                      <span>Backend</span>
-                    </Link>
+                    <>
+                      {project.githubUrls.frontend && (
+                        <span
+                          aria-hidden="true"
+                          className="text-text/30"
+                        >
+                          /
+                        </span>
+                      )}
+
+                      <Link
+                        href={project.githubUrls.backend}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} backend repository`}
+                        className="
+                          inline-flex
+                          items-center
+                          gap-1.5
+                          text-xs
+                          font-medium
+                          text-text
+                          transition-colors
+                          duration-300
+                          hover:text-main
+                          focus:outline-none
+                          focus-visible:ring-2
+                          focus-visible:ring-main
+                        "
+                      >
+                        <RiServerLine
+                          aria-hidden="true"
+                          className="text-base text-main"
+                        />
+
+                        <span>Backend</span>
+                      </Link>
+                    </>
                   )}
                 </>
               ) : (
@@ -85,30 +258,75 @@ function ProjectCard({ project }: { project: Project }) {
                   <Link
                     href={project.githubUrl}
                     target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center gap-1.5 text-[12px] font-semibold text-text/80 hover:text-main transition-colors"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} source code`}
+                    className="
+                      inline-flex
+                      items-center
+                      gap-1.5
+                      text-xs
+                      font-medium
+                      text-text
+                      transition-colors
+                      duration-300
+                      hover:text-main
+                      focus:outline-none
+                      focus-visible:ring-2
+                      focus-visible:ring-main
+                    "
                   >
-                    <RiGithubFill className="text-[18px]" />
+                    <RiGithubFill
+                      aria-hidden="true"
+                      className="text-base"
+                    />
+
                     <span>Source Code</span>
                   </Link>
                 )
               )}
             </div>
+
+            {/* Live Demo */}
             {project.liveUrl && (
               <Link
                 href={project.liveUrl}
                 target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-1.5 text-[12px] font-semibold text-main hover:underline transition-all ml-auto"
+                rel="noopener noreferrer"
+                aria-label={`${project.title} live demo`}
+                className="
+                  group/demo
+                  ml-auto
+                  inline-flex
+                  items-center
+                  gap-1.5
+                  text-xs
+                  font-semibold
+                  text-main
+                  transition-colors
+                  duration-300
+                  hover:text-text
+                  focus:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-main
+                "
               >
-                <RiExternalLinkFill className="text-[18px]" />
                 <span>Live Demo</span>
+
+                <RiExternalLinkFill
+                  aria-hidden="true"
+                  className="
+                    text-base
+                    transition-transform
+                    duration-300
+                    group-hover/demo:translate-x-0.5
+                  "
+                />
               </Link>
             )}
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 
