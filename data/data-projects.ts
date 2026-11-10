@@ -31,7 +31,7 @@ export const PROJECTS_DATA = [
     id: "stock-tracker-platform",
     title: "Stock Tracker Platform",
     category: "fullstack",
-    featured: false,
+    featured: true,
     description:
       "A real-time financial dashboard built with Next.js 15, Finnhub API, Better Auth, and Inngest. Features stock market search, personalized watchlists, and event-driven background processing.",
     tags: [
@@ -167,7 +167,7 @@ export const PROJECTS_DATA = [
     id: "carepulse-healthcare-platform",
     title: "CarePulse - Healthcare Management Platform",
     category: "fullstack",
-    featured: true,
+    featured: false,
     description:
       "A full-stack healthcare platform for patient registration, appointment scheduling, and medical record management. Features real-time UI synchronization via Next.js Server Actions, transactional email notifications via Custom SMTP, enforced dark mode, and production performance monitoring.",
     tags: [
