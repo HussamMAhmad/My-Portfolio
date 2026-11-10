@@ -9,6 +9,7 @@ import project8 from "./p8.jpg";
 import project9 from "./p9.jpg";
 import project10 from "./p10.jpg";
 import project11 from "./p11.jpg";
+import project12 from "./p12.png";
 
 export const imageProjects = {
   project1,
@@ -22,4 +23,5 @@ export const imageProjects = {
   project9,
   project10,
   project11,
+  project12
 };

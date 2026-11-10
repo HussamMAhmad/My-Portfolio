@@ -186,43 +186,60 @@ export const PROJECTS_DATA = [
     liveUrl: "https://health-care-alpha-flax.vercel.app/",
   },
   {
-  id: "react-hook-form-zod-signup",
-  title: "Interactive Sign-Up Form with Zod Validation",
-  category: "frontend",
-  featured: false,
-  description:
-    "A responsive authentication sign-up form built with React and Tailwind CSS. Features client-side schema validation using React Hook Form and Zod, real-time error handling, custom UI iconography, and interactive feedback toasts upon successful submission.",
-  tags: [
-    "React 19",
-    "React Hook Form",
-    "Zod Validation",
-    "Tailwind CSS",
-    "Lucide React",
-    "React Icons",
-    "JavaScript",
-  ],
-  image: imageProjects.project10,
-  githubUrl: "https://github.com/HussamMAhmad/Registration-Form",
-  liveUrl: "https://registration-form-roan-three.vercel.app/",
-},
-{
-  id: "qmenu-digital-menu-platform",
-  title: "QMenu – Digital Restaurant Menu Platform",
-  category: "fullstack",
-  featured: true,
-  description:
-    "A modern full-stack digital menu platform for restaurants. Built with Next.js and React 19, featuring real-time menu management, dynamic catalog browsing, Prisma ORM database management, and Cloudinary media integration with client-side validation.",
-  tags: [
-    "Next.js",
-    "React 19",
-    "TypeScript",
-    "Tailwind CSS",
-    "Prisma",
-    "Cloudinary",
-  ],
-  image:imageProjects.project11,
-  liveUrl: "https://qmenu-six.vercel.app/",
-}
+    id: "react-hook-form-zod-signup",
+    title: "Interactive Sign-Up Form with Zod Validation",
+    category: "frontend",
+    featured: false,
+    description:
+      "A responsive authentication sign-up form built with React and Tailwind CSS. Features client-side schema validation using React Hook Form and Zod, real-time error handling, custom UI iconography, and interactive feedback toasts upon successful submission.",
+    tags: [
+      "React 19",
+      "React Hook Form",
+      "Zod Validation",
+      "Tailwind CSS",
+      "Lucide React",
+      "React Icons",
+      "JavaScript",
+    ],
+    image: imageProjects.project10,
+    githubUrl: "https://github.com/HussamMAhmad/Registration-Form",
+    liveUrl: "https://registration-form-roan-three.vercel.app/",
+  },
+  {
+    id: "qmenu-digital-menu-platform",
+    title: "QMenu – Digital Restaurant Menu Platform",
+    category: "fullstack",
+    featured: true,
+    description:
+      "A modern full-stack digital menu platform for restaurants. Built with Next.js and React 19, featuring real-time menu management, dynamic catalog browsing, Prisma ORM database management, and Cloudinary media integration with client-side validation.",
+    tags: [
+      "Next.js",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "Cloudinary",
+    ],
+    image: imageProjects.project11,
+    liveUrl: "https://qmenu-six.vercel.app/",
+  },
+  {
+    id: "nebras-ahmad-portfolio",
+    title: "Nebras Ahmad — Civil Engineering Portfolio",
+    category: "frontend",
+    featured: false,
+
+    description:
+      "A modern personal portfolio website for Nebras Ahmad, a civil engineer specializing in structural engineering, construction, BIM, Revit and ETABS. Designed with an architectural and engineering-inspired visual identity to showcase professional projects, technical expertise and experience.",
+
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+
+    image: imageProjects.project12,
+
+    githubUrl: "https://github.com/HussamMAhmad/civil-profile",
+
+    liveUrl: "https://nebras-se.vercel.app",
+  },
 ];
 
 export const TOP_PROJECTS = PROJECTS_DATA.filter((project) => {
